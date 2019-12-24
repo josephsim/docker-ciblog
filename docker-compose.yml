@@ -16,12 +16,13 @@ services:
   
   db:
     container_name: mysql
-    image: mysql:latest
+    image: mysql:5.7
     ports:
       - '3306:3306'
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
       MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: ciblog
     volumes:
       - ./assets/sql/ciblog.sql:/docker-entrypoint-initdb.d/ciblog.sql
