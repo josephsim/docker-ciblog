@@ -26,4 +26,4 @@ services:
       MYSQL_DATABASE: ciblog
       MYSQL_INITDB_SKIP_TZINFO: "yes"
     volumes:
-      - ./assets/sql/:/docker-entrypoint-initdb.d/
+      - ./assets/sql/ciblog.sql:/docker-entrypoint-initdb.d/ciblog.sql
