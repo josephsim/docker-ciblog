@@ -7,5 +7,3 @@ RUN apt-get update && \
     docker-php-ext-install gd
 RUN a2enmod rewrite
 RUN service apache2 restart
-
-RUN COPY docker-entrypoint-initdb.d /docker-entrypoint-initdb.d
