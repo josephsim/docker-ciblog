@@ -24,6 +24,5 @@ services:
       MYSQL_USER: root
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: ciblog
-      MYSQL_INITDB_SKIP_TZINFO: "yes"
     volumes:
       - ./assets/sql/:/docker-entrypoint-initdb.d/
