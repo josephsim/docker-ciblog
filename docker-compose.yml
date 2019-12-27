@@ -25,4 +25,4 @@ services:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: ciblog
     volumes:
-      - ./assets/sql/ciblog.sql:/docker-entrypoint-initdb.d/ciblog.sql
+      - ./assets/sql/:/docker-entrypoint-initdb.d/
