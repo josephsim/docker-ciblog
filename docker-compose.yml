@@ -12,7 +12,7 @@ services:
     ports:
       - '80:80'
     volumes: 
-      - .:/var/www/html/
+      - .:/var/www/html/:Z
   
   db:
     container_name: mysql
