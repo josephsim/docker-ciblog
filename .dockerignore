@@ -1,0 +1,8 @@
+.git*
+.dockerignore
+Dockerfile
+docker-compose.*
+/deployment
+readme*
+contributing.md
+license.txt

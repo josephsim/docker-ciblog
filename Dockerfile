@@ -7,3 +7,5 @@ RUN apt-get update && \
     docker-php-ext-install gd
 RUN a2enmod rewrite
 RUN service apache2 restart
+COPY . /var/www/html/
+EXPOSE 80

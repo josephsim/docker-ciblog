@@ -2,28 +2,25 @@ version: '3'
 
 services:
 
-  web:
+  ciblog-web:
     container_name: ciblog
     build: .
-    links: 
-      - db
     depends_on:
-      - db
+      - ciblog-db
     ports:
       - '80:80'
     volumes: 
       - .:/var/www/html/:Z
   
-  db:
+  ciblog-db:
     container_name: mysql
     image: mysql:5.7
     ports:
       - '3306:3306'
     environment:
-      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
-      MYSQL_USER: root
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: ciblog
       MYSQL_INITDB_SKIP_TZINFO: "yes"
     volumes:
       - ./assets/sql:/docker-entrypoint-initdb.d
+
